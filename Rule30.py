@@ -2,23 +2,12 @@ from pylab import *
 import sys
 
 def rule30(x, y, z):
-    if x and y and z:
-        return 0
-    if x and y and not z:
-        return 0
-    if x and not y and z:
-        return 0
-    if x and not y and not z:
-        return 1
-    if not x and y and z:
-        return 1
-    if not x and y and not z:
-        return 1
-    if not x and not y and z:
-        return 1
-    if not x and not y and not z:
-    	return 0
-        
+	string = str(x) + str(y) + str(z)
+	number = int(string, 2)
+	if number > 4 or number < 1:
+		return 0
+	return 1
+	    
 #Size of the automaton, specify before running
 #Best size is 35 (Depending how big the console is)     
 try:
